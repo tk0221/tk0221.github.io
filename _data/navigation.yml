@@ -1,0 +1,16 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Blog"
+    url: /posts/
+  - title: "Topics"
+    url: /topics/
+
+
+# coding_practice links
+coding_practice:
+  - title: Coding Practice
+    children:
+      - title: "Intro"
+        url: /docs/coding_practice/intro/
