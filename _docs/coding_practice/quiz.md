@@ -5,7 +5,7 @@ toc: true
 layout: single
 ---
 
-# Easy
+## Easy
 
 ### Encode String [repl](https://repl.it/@tk0221/encode)
 ```ruby
@@ -27,6 +27,6 @@ testcases = ["", "a", "aa", "abc", "aaabbbbdcal"]
 testcases.each { |str| pp encode(str) } # "", "a1", "a2", "a1b1c1", "a3b4d1c1a1l1"
 ```
 
-# Medium
+## Medium
 
-# Hard
+## Hard
