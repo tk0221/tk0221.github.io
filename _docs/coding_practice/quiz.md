@@ -7,7 +7,7 @@ layout: single
 
 # Easy
 
-### Encode String
+### Encode String [repl](https://repl.it/@tk0221/encode)
 ```ruby
 #  Input : "aaabbbbdcal"  
 #  Output : "a3b4d1c1a1l1"
