@@ -7,9 +7,20 @@ toc: true
 layout: single
 ---
 
-## Introduction
+# Introduction
 
-```
-def func h
+```ruby
+"Hello, World!"
+#>>"Hello, World!"
+def f
+  p "Hello, World!"
 end
+f
+#>>"Hello, World!"
 ```
+
+## Basic Algorithm
+
+### Sorting
+
+#### Quick Sort
