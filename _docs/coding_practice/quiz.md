@@ -73,7 +73,6 @@ end
 
 ## Medium
 
-<<<<<<< HEAD
 ### Jumpgame [repl](https://repl.it/@tk0221/jumpgame)
 ```ruby
 # jumpgame - leetcode - Medium
@@ -175,7 +174,6 @@ pp sol2([1,2,3], 3)    ==    sol3([1,2,3], 3)
 pp sol2([1,2,3,5], 4)  ==    sol3([1,2,3,5], 4)
 pp sol3([4,5,6,7,1,2,3], 0)
 pp sol3([4,5,6,7,1,2,3], 1)
->>>>>>> ed97da98ae9ce954d1e6a2f7b9dd93bcc053d782
 ```
 
 ## Hard
