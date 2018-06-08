@@ -107,7 +107,8 @@ def jumpgame2(nums)
     end
     return jump
 end
-=======
+```
+
 ### Search k in array  [repl](https://repl.it/@tk0221/bsearch)
 ```ruby
 # Req. search k in array and return true or false
