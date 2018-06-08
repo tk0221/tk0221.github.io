@@ -73,4 +73,40 @@ end
 
 ## Medium
 
+### Jumpgame [repl](https://repl.it/@tk0221/jumpgame)
+```ruby
+# jumpgame - leetcode - Medium
+# Input: [2,3,1,1,4]
+# Output: true
+# Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+
+def jumpgame(nums)
+    j = nums.first
+    (0...nums.size).each do |i|
+         return false if i > j
+         j = [j, nums[i]+i].max
+     end
+     return true
+end
+
+# Jumpgame2 - leetcode - Hard
+# Input: [2,3,1,1,4]
+# Output: 2
+# Explanation: The minimum number of jumps to reach the last index is 2.
+#     Jump 1 step from index 0 to 1, then 3 steps to the last index.
+
+def jumpgame2(nums)
+    jump = 0
+    cj, nj = 0, 0
+    (0...nums.size).each do |i|
+        if cj == i - 1
+            jump+=1
+            cj = nj
+        end
+        nj = [nj, nums[i] + i].max
+    end
+    return jump
+end
+```
+
 ## Hard
