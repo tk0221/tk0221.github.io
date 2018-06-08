@@ -73,6 +73,7 @@ end
 
 ## Medium
 
+<<<<<<< HEAD
 ### Jumpgame [repl](https://repl.it/@tk0221/jumpgame)
 ```ruby
 # jumpgame - leetcode - Medium
@@ -107,6 +108,74 @@ def jumpgame2(nums)
     end
     return jump
 end
+=======
+### Search k in array  [repl](https://repl.it/@tk0221/bsearch)
+```ruby
+# Req. search k in array and return true or false
+# 1. array is unsorted   => [1,5,2,4,3]
+# 2. array is sorted     => [1,2,3,4,5]
+# 3. array is sorted but rotated => [3,4,5,1,2]
+
+def sol1(nums, k) #unsorted array
+    nums.include?(k)
+end
+# need to run thru array
+# O(n)
+
+def sol2(nums, k) #sorted array
+    lo, hi = 0, nums.size-1
+    while lo <= hi do
+        mid = (lo+hi)/2
+        if k == nums[mid]
+            return true
+        elsif k < nums[mid]
+            hi = mid - 1
+        else
+            lo = mid + 1
+        end
+    end
+    return false
+end
+#search O(lg n) since each step we remove half of array
+
+def sol3(nums, k)
+    lo, hi = 0, nums.size-1
+    while lo <= hi do
+        mid = (lo+hi)/2
+        if k == nums[mid]
+            return true
+        elsif nums[mid] > nums[hi] #rotated
+            if nums[mid] > k && k >= nums[lo]
+                hi = mid
+            else
+                lo = mid + 1
+            end
+        elsif nums[mid] < nums[hi]
+            if nums[mid] < k && k <= nums[hi]
+               lo = mid + 1
+            else
+                hi = mid 
+            end
+        else
+            hi-=1
+        end
+    end
+
+    return nums[lo] == k ? true : false
+end
+#idea is same as sol2, just need more code
+
+pp sol2([], 1)         ==    sol3([], 1) #test empty case 
+pp sol2([1], 1)        ==    sol3([1], 1)
+pp sol2([1], 0)        ==    sol3([1], 0)
+pp sol2([0,1], 1)      ==    sol3([0,1], 1)
+pp sol2([1,2], 0)      ==    sol3([1,2], 0)
+pp sol2([1,2], 3)      ==    sol3([1,2], 3)
+pp sol2([1,2,3], 3)    ==    sol3([1,2,3], 3)
+pp sol2([1,2,3,5], 4)  ==    sol3([1,2,3,5], 4)
+pp sol3([4,5,6,7,1,2,3], 0)
+pp sol3([4,5,6,7,1,2,3], 1)
+>>>>>>> ed97da98ae9ce954d1e6a2f7b9dd93bcc053d782
 ```
 
 ## Hard
